@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="管理 Love Live! SIF2 私服帳號">
+    <meta property="og:title" content="帳號 - EW WebUI">
+    <meta property="og:description" content="管理 Love Live! SIF2 私服帳號">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="favicon.png">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/account.css">
+    <link rel="stylesheet" href="styles/dialog.css">
+
+    <script src="scripts/header.js" defer></script>
+    <script src="scripts/account.mjs" type="module"></script>
+
+    <title>帳號 - EW WebUI</title>
+</head>
+<body>
+    <header>
+        <img src="favicon.png" alt="網站標誌" width="50" height="50">
+        <span>EW 私服</span>
+        <button id="ham-btn" class="hamburger" title="選單"></button>
+        <nav id="nav-bar" class="navigation">
+            <ul>
+                <li><a href="./">首頁</a></li>
+                <li><a href="cards.html">卡牌資料庫</a></li>
+                <li><a href="songs.html">歌曲列表</a></li>
+                <li><a href="help.html">常見問題</a></li>
+                <li id="account"><a class="current-page" href="account.html">帳號</a></li>
+                <li id="login"><a href="login.html">登入</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>帳號</h1>
+
+        <div id="tools">
+            <button id="export-account">匯出帳號</button>
+            <button id="logout">登出</button>
+        </div>
+
+        <div id="account-details">
+            <h2>使用者資訊</h2>
+            <p><strong>名稱：</strong> <span id="user-name"></span></p>
+            <p><strong>使用者 ID：</strong> <span id="user-id"></span></p>
+            <p><strong>經驗值：</strong> <span id="user-exp"></span></p>
+            <p><strong>主隊伍欄位：</strong> <span id="user-main-deck-slot"></span></p>
+            <p><strong>Rank：</strong> <span id="user-rank"></span></p>
+            <p><strong>目前體力：</strong> <span id="user-stamina"></span></p>
+        </div>
+
+        <div id="gem-info">
+            <h2>Love Gem 資訊</h2>
+            <p><strong>免費 Love Gem：</strong> <span id="gem-free"></span></p>
+            <p><strong>Love Gem 總數：</strong> <span id="gem-total"></span></p>
+        </div>
+
+        <div id="login-bonus-section">
+            <h2>目前登入獎勵清單</h2>
+            <ul id="login-bonus-list"></ul>
+            <form id="login-bonus-form">
+                <select name="bonuses" id="bonuses" title="bonuses"></select>
+                <button type="submit">提交</button>
+            </form>
+        </div>
+
+        <div class="server-time">
+            <h2>伺服器時間</h2>
+            <p>目前設定為： <span id="current-server-time"></span>.</p>
+            <p>設定為 0 會改成現在時間；設定為 -1 會重設。</p>
+            <p>時間仍會從你設定的 timestamp 開始正常推進。</p>
+            <form action="time.html" method="GET">
+                <input type="text" name="servertime" placeholder="輸入伺服器時間">
+                <button type="submit">提交</button>
+            </form>
+        </div>
+
+        <div class="account-boost">
+            <h2>一鍵補資源</h2>
+            <p>不少使用者覺得即使在私服裡取得獎勵仍然不夠方便……</p>
+            <p>所以這裡提供一個可自行選擇的一鍵補資源按鈕。</p>
+            <p>這個按鈕目前會把多數道具補到很高的數量。</p>
+            <p>如果你需要<i>更多道具</i>，可以再提出需求。</p>
+            <p>道具會發送到遊戲內禮物盒。</p>
+            <p>使用後無法還原。</p>
+            <p>準備好就按下去吧：</p>
+            <div class="give-me-money">
+                <button>現在就給我！！！</button>
+            </div>
+        </div>
+
+        <div>
+            <h2>主隊伍卡牌</h2>
+            <div class="card-grid" id="card-grid"></div>
+        </div>
+        <dialog>
+            <div class="modal-content">
+                <h2 id="modal-title">錯誤</h2>
+                <p id="modal-message">發生錯誤。</p>
+                <button class="close-button">關閉</button>
+            </div>
+        </dialog>
+    </main>
+    <footer>
+        <div class="social">
+            <a href="https://discord.gg/gHuCzK3b2Z" target="_blank"><img src="images/discord.png" alt="Discord" width="24" height="24"></a>
+        </div>
+        <div class="copyright">
+            <span>©<span id="currentyear"></span> | EW (Ew, Why?) 私服</span>
+            <p>EW Version 1.1.0 - <a href="https://git.ethanthesleepy.one/ethanaobrien/ew">檢視原始碼</a> - <a href="https://git.ethanthesleepy.one/ethanaobrien/ew/src/branch/main/LICENSE">檢視授權</a></p>
+        </div>
+    </footer>
+</body>
+</html>

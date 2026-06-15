@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="卡牌資料庫 - EW WebUI. View a catalog of cards in the game Love Live School Idol Festival 2!">
+    <meta property="og:title" content="卡牌資料庫 - EW WebUI">
+    <meta property="og:description" content="卡牌資料庫 - EW WebUI. View a catalog of cards in the game Love Live School Idol Festival 2!">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="favicon.png">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/navigation.css">
+    <link rel="stylesheet" href="styles/card.css">
+
+    <script src="scripts/header.js" defer></script>
+    <script src="scripts/cards.mjs" type="module"></script>
+
+    <title>卡牌資料庫 - EW WebUI</title>
+</head>
+<body>
+    <header>
+        <img src="favicon.png" alt="網站標誌" width="50" height="50">
+        <span>EW 私服</span>
+        <button id="ham-btn" class="hamburger" title="選單"></button>
+        <nav id="nav-bar" class="navigation">
+            <ul>
+                <li><a href="./">首頁</a></li>
+                <li><a class="current-page" href="cards.html">卡牌資料庫</a></li>
+                <li><a href="songs.html">歌曲列表</a></li>
+                <li><a href="help.html">常見問題</a></li>
+                <li id="account"><a href="account.html">帳號</a></li>
+                <li id="login"><a href="login.html">登入</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>卡牌資料庫</h1>
+        <div class="language-selector" aria-label="語言">
+            <button class="lang-btn" data-lang="EN">English</button>
+            <button class="lang-btn" data-lang="JP">Japanese</button>
+            <button class="lang-btn" data-lang="ZH-CHT">繁體中文</button>
+        </div>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="搜尋卡牌..." aria-label="搜尋">
+            <button id="search-button">搜尋</button>
+        </div>
+        <div class="card-grid"></div>
+        <div class="page-navigation"></div>
+    </main>
+    <footer>
+        <div class="social">
+            <a href="https://discord.gg/gHuCzK3b2Z" target="_blank"><img src="images/discord.png" alt="Discord" width="24" height="24"></a>
+        </div>
+        <div class="copyright">
+            <span>©<span id="currentyear"></span> | EW (Ew, Why?) 私服</span>
+            <p>EW Version 1.1.0 - <a href="https://git.ethanthesleepy.one/ethanaobrien/ew">檢視原始碼</a> - <a href="https://git.ethanthesleepy.one/ethanaobrien/ew/src/branch/main/LICENSE">檢視授權</a></p>
+        </div>
+    </footer>
+</body>
+</html>

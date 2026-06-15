@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="EW Love Live! SIF2 私服常見問題">
+    <meta property="og:title" content="常見問題 - EW WebUI">
+    <meta property="og:description" content="EW Love Live! SIF2 私服常見問題">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="favicon.png">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/help.css">
+
+    <script src="scripts/header.js" defer></script>
+    <script src="scripts/help.mjs" type="module"></script>
+
+    <title>常見問題 - EW WebUI</title>
+</head>
+<body>
+    <header>
+        <img src="favicon.png" alt="網站標誌" width="50" height="50">
+        <span>EW 私服</span>
+        <button id="ham-btn" class="hamburger" title="選單"></button>
+        <nav id="nav-bar" class="navigation">
+            <ul>
+                <li><a href="./">首頁</a></li>
+                <li><a href="cards.html">卡牌資料庫</a></li>
+                <li><a href="songs.html">歌曲列表</a></li>
+                <li><a class="current-page" href="help.html">常見問題</a></li>
+                <li id="account"><a href="account.html">帳號</a></li>
+                <li id="login"><a href="login.html">登入</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>常見問題</h1>
+
+        <div class="question">
+            <h2>「ew」是什麼？這個伺服器是做什麼的？</h2>
+            <p>「ew」是一個用 Rust 編寫的《Love Live! School idol festival 2 MIRACLE LIVE!》私服。這款遊戲是 Love Live! 系列題材的手機節奏遊戲。</p>
+        </div>
+
+        <div class="question">
+            <h2>我只是想連到這個伺服器遊玩，要怎麼安裝 App？（Android）</h2>
+            <p id="downloadUrl">此伺服器管理員沒有提供預先修補好的 APK。請參考下一個問題。</p>
+        </div>
+
+        <div class="question">
+            <h2>伺服器管理員沒有提供下載連結，我要怎麼修補 APK？（Android）</h2>
+            <p>你可以使用 <a href="https://arasfon.ru/sif2/patcher/">@arasfon 的 sif2 apk patcher</a>。把資源 URL「<span class="assetUrl">https://sif2.sif.moe</span>」填入「Assets URL」，再填入伺服器 URL（通常是「<span class="windowlocation"></span>」，但實際情況可能不同）。選擇遊戲版本，將「header format」設為「Lowercase」，然後按下 patch。完成後使用 <a href="https://github.com/patrickfav/uber-apk-signer">uber-apk-signer</a> 簽名 APK，再傳到手機安裝。</p>
+        </div>
+
+        <div class="question">
+            <h2>我要怎麼安裝 App？（iOS）</h2>
+            <p>iOS 的安裝流程比 Android 簡單。先下載國際服或日服的 IPA，然後使用 <a href="https://sideloadly.io/">Sideloadly</a> 或你偏好的安裝工具側載 App。接著打開系統設定，找到剛安裝的 App，填入伺服器 URL（通常是「<span class="windowlocation"></span>」，但實際情況可能不同）以及資源 URL「<span class="assetUrl">https://sif2.sif.moe</span>」。如果 App 開啟時出錯，確認設定中的 URL 結尾不要帶斜線（/）。</p>
+        </div>
+
+        <div class="question">
+            <h2>救命！我打開 App 時顯示「不可用」（iOS）</h2>
+            <p>不要刪除 App，重新側載一次即可。這是 Apple 的安全機制。</p>
+        </div>
+
+        <div class="question">
+            <h2>目前完成度如何？</h2>
+            <p>基本功能已可正常使用。伺服器本體佔用空間不到 20MB，使用 Rust 編寫；作者認為整體寫得還不錯。</p>
+        </div>
+
+        <div class="question">
+            <h2>我的電腦/筆電可以跑伺服器嗎？</h2>
+            <p>非常有可能。只要你的平台受到 <a href="https://doc.rust-lang.org/nightly/rustc/platform-support.html">Rust 支援</a>，理論上就可以。若沒有現成構建，建議先手動編譯專案。<a href="https://git.ethanthesleepy.one/ethanaobrien/ew">ew repo</a></p>
+        </div>
+
+        <div class="question">
+            <h2>伺服器現在掛了嗎？我連不上</h2>
+            <p>如果你剛剛就是從目前使用的伺服器載入這個頁面，那答案通常是否定的；否則請聯絡伺服器管理員。</p>
+        </div>
+
+        <div class="question">
+            <h2>活動能正常運作嗎？</h2>
+            <p>多數活動尚未完整實作，不過大部分應該不會讓遊戲崩潰。Star 活動已有部分實作，可以提升排名並與其他玩家競爭排行榜，但目前尚未實作活動獎勵。</p>
+        </div>
+
+        <div class="question">
+            <h2>那我要怎麼取得活動 UR？</h2>
+            <p>有一些序號可以取得不同內容，其中包含活動 UR。具體序號內容可能會變動，建議查看 serial code 檔案以取得最新序號。</p>
+        </div>
+
+        <div class="question">
+            <h2>為什麼我做某件事時遊戲會崩潰？</h2>
+            <p>這通常代表伺服器端某個功能還有問題。如果是自架伺服器，請回報給上游；如果你使用別人的伺服器，請聯絡伺服器管理員並請他們回報問題。</p>
+        </div>
+    </main>
+    <footer>
+        <div class="social">
+            <a href="https://discord.gg/gHuCzK3b2Z" target="_blank"><img src="images/discord.png" alt="Discord" width="24" height="24"></a>
+        </div>
+        <div class="copyright">
+            <span>©<span id="currentyear"></span> | EW (Ew, Why?) 私服</span>
+            <p>EW Version 1.1.0 - <a href="https://git.ethanthesleepy.one/ethanaobrien/ew">檢視原始碼</a> - <a href="https://git.ethanthesleepy.one/ethanaobrien/ew/src/branch/main/LICENSE">檢視授權</a></p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Love Live! SIF2 私服 WebUI。瀏覽卡牌資料庫、歌曲列表與帳號工具。">
+    <meta property="og:title" content="首頁 - EW WebUI">
+    <meta property="og:description" content="Love Live! SIF2 私服 WebUI。瀏覽完整卡牌資料庫、歌曲列表與帳號工具。">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="favicon.png">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/homepage.css">
+
+    <script src="scripts/header.js" defer></script>
+
+    <title>首頁 - EW WebUI</title>
+</head>
+<body>
+    <header>
+        <img src="favicon.png" alt="網站標誌" width="50" height="50">
+        <span>EW 私服</span>
+        <button id="ham-btn" class="hamburger" title="選單"></button>
+        <nav id="nav-bar" class="navigation">
+            <ul>
+                <li><a class="current-page" href="./">首頁</a></li>
+                <li><a href="cards.html">卡牌資料庫</a></li>
+                <li><a href="songs.html">歌曲列表</a></li>
+                <li><a href="help.html">常見問題</a></li>
+                <li id="account"><a href="account.html">帳號</a></li>
+                <li id="login"><a href="login.html">登入</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <h1>歡迎來到 EW 私服！</h1>
+            <p>這裡是 <i>Love Live! School Idol Festival 2</i> 私服用 WebUI。你可以管理帳號、查看卡牌資料庫、瀏覽歌曲列表與通關率統計。</p>
+            <a href="login.html" class="button">查看帳號</a>
+        </section>
+
+        <section class="features">
+            <h2>目前提供什麼功能？</h2>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <img src="images/cards.png" alt="卡牌" width="50" height="50">
+                    <h3>完整卡牌資料庫</h3>
+                    <p>查看卡牌名稱、成員、稀有度、屬性與縮圖，方便搜尋和整理隊伍。</p>
+                    <a href="cards.html" class="button">瀏覽卡牌</a>
+                </div>
+                <div class="feature-item">
+                    <img src="images/musical-note.png" alt="音符" width="50" height="50">
+                    <h3>完整歌曲列表</h3>
+                    <p>查看遊戲內歌曲、演唱者、介紹、配信日期，也能前往 Live 通關率統計。</p>
+                    <a href="songs.html" class="button">查看歌曲</a>
+                </div>
+                <div class="feature-item">
+                    <img src="images/group.png" alt="社群" width="50" height="50">
+                    <h3>活躍社群</h3>
+                    <p>Connect with fellow School Idol enthusiasts on our Discord server! Share tips, strategies, and your love for the game.</p>
+                    <a href="https://discord.gg/gHuCzK3b2Z" class="button">Join the Discord</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="about">
+            <h2>關於伺服器</h2>
+            <p>EW 私服由 Ethan 建立，起因是他喜歡這款遊戲的節奏玩法，也想做點有趣的東西。伺服器使用 Rust 編寫，是他早期較大型的 Rust 專案之一。</p>
+        </section>
+    </main>
+    <footer>
+        <div class="social">
+            <a href="https://discord.gg/gHuCzK3b2Z" target="_blank"><img src="images/discord.png" alt="Discord" width="24" height="24"></a>
+        </div>
+        <div class="copyright">
+            <span>©<span id="currentyear"></span> | EW (Ew, Why?) 私服</span>
+            <p>EW Version 1.1.0 - <a href="https://git.ethanthesleepy.one/ethanaobrien/ew">檢視原始碼</a> - <a href="https://git.ethanthesleepy.one/ethanaobrien/ew/src/branch/main/LICENSE">檢視授權</a></p>
+        </div>
+    </footer>
+</body>
+</html>

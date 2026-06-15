@@ -1,0 +1,60 @@
+
+:root {
+    --header-background: #F8BBD0; /* Light Pink - Soft and inviting header background.  Evokes cherry blossoms, sweetness, and fun. */
+    --header-color: black; /* Hot Pink - A brighter pink for text and icons within the header. Provides contrast against the light pink background. */
+    --header-hover: #E188B3; /* Darker Pink - Hover effect for header elements. */
+    --header-highlight: rgba(241, 156, 197, 0.5);
+    --body-background: #FFF0F5; /* Very Pale Pink -  Almost white, adds a subtle pink tint to the background, creating a warm and cozy feel. */
+    --body-font: #424242; /* Dark Slate Gray - Readable font color, softer than pure black. */
+    --body-hover: #F48FB1; /* Pastel Pink - Link hover color.  Subtle and harmonious with the overall scheme. */
+    --body-card: #FFFFFF; /* White - Clean background for cards and content sections. */
+
+
+    --maximum-page-size: 1600px;
+}
+
+header *, footer * {
+    font-family: "Alegreya", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+body * {
+    font-family: "Alegreya", serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+}
+
+html {
+    background-color: var(--body-background);
+}
+
+/* Ensure footer is pinned to bottom of screen if there is not enough content */
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+}
+body > * {
+    width: 100%;
+}
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+
+@media only screen and (min-width: 38rem) {
+    header, main, nav, footer {
+        max-width: var(--maximum-page-size);
+        margin: 0 auto;
+    }
+}

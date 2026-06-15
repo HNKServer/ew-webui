@@ -1,0 +1,74 @@
+main {
+    background-color: var(--body-background);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+main h1 {
+    color: var(--header-color);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.language-selector {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.language-selector button {
+    background-color: var(--body-card);
+    border: 1px solid var(--body-hover);
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    margin: 0.25rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    white-space: nowrap;
+}
+
+.language-selector button:hover {
+    background-color: var(--body-hover);
+    color: var(--body-background);
+}
+
+.language-selector button.active {
+    background-color: var(--header-background);
+    font-weight: bold;
+}
+
+.music-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.music-item strong {
+    font-size: 1.2rem;
+}
+
+.clear-rate-link {
+    background-color: var(--body-card);
+    border: 1px solid var(--body-hover);
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    margin: 0.25rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    text-decoration: none;
+    color: var(--body-text);
+    margin-top: 0.5rem;
+    text-align: center;
+}
+
+.clear-rate-link:hover {
+    background-color: var(--body-hover);
+    color: var(--body-background);
+}
+
+.clear-rate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}

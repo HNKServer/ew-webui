@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="匯入帳號以開始遊玩">
+    <meta property="og:title" content="匯入 - EW WebUI">
+    <meta property="og:description" content="匯入帳號以開始遊玩">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="favicon.png">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/login.css"> <!-- Styles are very similar to login page... -->
+    <link rel="stylesheet" href="styles/import.css">
+    <link rel="stylesheet" href="styles/dialog.css">
+
+    <script src="scripts/header.js" defer></script>
+    <script src="scripts/import.mjs" type="module"></script>
+
+    <title>匯入 - EW WebUI</title>
+</head>
+<body>
+    <header>
+        <img src="favicon.png" alt="網站標誌" width="50" height="50">
+        <span>EW 私服</span>
+        <button id="ham-btn" class="hamburger" title="選單"></button>
+        <nav id="nav-bar" class="navigation">
+            <ul>
+                <li><a href="./">首頁</a></li>
+                <li><a href="cards.html">卡牌資料庫</a></li>
+                <li><a href="songs.html">歌曲列表</a></li>
+                <li><a href="help.html">常見問題</a></li>
+                <li id="account"><a href="account.html">帳號</a></li>
+                <li id="login"><a class="current-page" href="login.html">登入</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="login-form">
+            <h1>匯入使用者</h1>
+            <form>
+                <label for="userdataFile">使用者資料檔（必填）：</label>
+                <input type="file" id="userdataFile" name="userdataFile" accept="application/json">
+                
+                <label for="userhomeFile">User Home 資料檔（必填）：</label>
+                <input type="file" id="userhomeFile" name="userhomeFile" accept="application/json">
+                
+                <label for="usermissionsFile">User Missions 資料檔（選填）：</label>
+                <input type="file" id="usermissionsFile" name="usermissionsFile" accept="application/json">
+                
+                <label for="usersifcardsFile">SIF 卡牌資料檔（選填）：</label>
+                <input type="file" id="usersifcardsFile" name="usersifcardsFile" accept="application/json">
+                
+                <label for="password">轉移密碼（遊戲不支援特殊字元；請只使用英文字母與數字，否則可能無法登入）：</label>
+                <input type="password" id="password" name="password">
+                
+                <input type="submit" value="提交">
+            </form>
+        </div>
+        <dialog>
+            <div class="modal-content">
+                <h2 id="modal-title">錯誤</h2>
+                <p id="modal-message">發生錯誤。</p>
+                <button class="close-button">關閉</button>
+            </div>
+        </dialog>
+    </main>
+    <footer>
+        <div class="social">
+            <a href="https://discord.gg/gHuCzK3b2Z" target="_blank"><img src="images/discord.png" alt="Discord" width="24" height="24"></a>
+        </div>
+        <div class="copyright">
+            <span>©<span id="currentyear"></span> | EW (Ew, Why?) 私服</span>
+            <p>EW Version 1.1.0 - <a href="https://git.ethanthesleepy.one/ethanaobrien/ew">檢視原始碼</a> - <a href="https://git.ethanthesleepy.one/ethanaobrien/ew/src/branch/main/LICENSE">檢視授權</a></p>
+        </div>
+    </footer>
+</body>
+</html>

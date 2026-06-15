@@ -1,0 +1,38 @@
+footer {
+    display: grid;
+    grid-template-columns: auto;
+    gap: 10px;
+    background-color: var(--header-background);
+    color: var(--header-font);
+    padding: 12px 10px;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.social img {
+    width: 2.5rem;
+    height: auto;
+}
+
+.textblock {
+    display: flex;
+    flex-direction: column;
+}
+
+.copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.copyright a {
+    color: blue;
+    text-decoration: none;
+}

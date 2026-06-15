@@ -1,0 +1,66 @@
+dialog {
+    width: 300px;
+    max-width: 90%;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--body-card);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    position: fixed;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    max-width: 90%;
+    animation: dialog-show 0.3s ease forwards;
+}
+
+@keyframes dialog-show {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+dialog .modal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#modal-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: var(--body-font);
+}
+
+#modal-message {
+    font-size: 1em;
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--body-font);
+}
+
+.close-button {
+    background-color: var(--header-color);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.close-button:hover {
+    background-color: var(--header-hover);
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.7);
+}

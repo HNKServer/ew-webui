@@ -1,0 +1,86 @@
+#login-form {
+    width: 400px;
+    max-width: 100%;
+    margin: 50px auto;
+    background-color: var(--header-background);
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    font-family: sans-serif;
+}
+
+#login-form h1 {
+    text-align: center;
+    margin: 0;
+    padding: 20px 0;
+    font-size: 28px;
+    font-weight: 700;
+    color: black;
+}
+
+form {
+    padding: 20px;
+    background-color: var(--body-card);
+    border-radius: 10px;
+    font-family: sans-serif;
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: var(--body-font);
+}
+
+form input[type="text"],
+form input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+form input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--header-color);
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: var(--header-hover);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.sub {
+    display: none;
+    padding-top: 10px;
+    width: 100%;
+}
+
+.sub button {
+    width: 40%;
+    padding: 12px;
+    background-color: var(--header-hover);
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px #0000001a;
+    transition: box-shadow .3s ease;
+}
+
+.sub button:hover {
+    box-shadow: 0 4px 6px #0000004d;
+}

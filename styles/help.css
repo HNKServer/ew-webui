@@ -1,0 +1,22 @@
+main {
+    padding: 20px;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.question {
+    border-bottom: 1px solid #ccc;
+    padding: 15px 0 15px 10px;
+}
+
+.question h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.question p {
+    margin-top: 0;
+    line-height: 1.6;
+}
